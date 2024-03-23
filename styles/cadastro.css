@@ -1,6 +1,18 @@
+body {
+  display: grid;
+  place-items: center;
+
+  width: 100vw;
+  height: 100vmin;
+}
+
 form {
   display: flex;
   flex-direction: column;
 
   gap: 10px;
+}
+
+label {
+  margin-bottom: -10px;
 }
