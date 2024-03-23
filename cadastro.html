@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Denúncia!</title>
+
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/cadastro.css" />
+  </head>
+  <body>
+    <form action="">
+      <h2>Cadastro de Denúncia</h2>
+
+      <label for="input-nome">Nome:</label>
+      <input type="text" id="input-nome" required />
+
+      <label for="input-email">Email:</label>
+      <input type="text" id="input-email" required />
+
+      <label for="input-tipo">Tipo:</label>
+      <input type="text" id="input-tipo" required />
+
+      <button id="button-denunciar">Denunciar</button>
+    </form>
+
+    <script type="module" src="scripts/database/database.js"></script>
+    <script type="module" src="scripts/cadastro.js"></script>
+  </body>
+</html>

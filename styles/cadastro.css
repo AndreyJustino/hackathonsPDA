@@ -1,0 +1,28 @@
+body {
+  display: grid;
+  place-items: center;
+
+  width: 100vw;
+  height: 100vmin;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+  padding: 15px;
+}
+
+h2 {
+  text-align: center;
+}
+
+label {
+  margin-bottom: -10px;
+}
