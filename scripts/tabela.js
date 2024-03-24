@@ -8,7 +8,6 @@ function main(){
     
     const denuncias = databaseDenuncias.obterDenuncias() // verificar se é um objeto de objetos
     const denunciaArray = Object.values(denuncias)
-    console.log(denunciaArray)
 
     exibirTabela(denunciaArray)
 
@@ -26,9 +25,6 @@ function exibirTabela(denuncia){
         </tr>
         `
         corpoTabela.innerHTML += tr
-
-        // <td class="update"><button class="editar" id="editar" onclick="editar(${index})">Editar</button></td>
-        // <td class="delete"><button class="excluir" id="excluir" onclick="excluir(${index})">Excluir</button></td>
     });
 }
 

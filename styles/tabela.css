@@ -4,21 +4,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-main{
-    border: solid 3px red;
-}
-
 section{
-    border: solid 3px blue;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 div{
-    border: solid 3px green;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,11 +20,9 @@ div{
 }
 
 table{
-    border: solid 3px yellow;
-
     width: 85vw;
     border-spacing: 0;
-    /* border: 1px solid #80808080; */
+    border: 1px solid #80808080;
     background-color: var(--cor1);
 }
 
@@ -45,10 +35,8 @@ th, td , caption{
     background-color: var(--cor1);
 }
 
-
 td{
-    background-color: #ffffff;
-    
+    background-color: var(--white); 
 }
 
 a#cadastrar{
