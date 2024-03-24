@@ -5,7 +5,9 @@
 }
 
 :root{
-    --cor1: ;
+    --white: #ffffff;
+    --black: #000000;
+    --cor1: #e7e7e7;
     --cor2: ;
     --cor3: ;
 }
@@ -39,7 +41,7 @@ table{
     width: 85vw;
     border-spacing: 0;
     /* border: 1px solid #80808080; */
-    background-color: #e7e7e7;
+    background-color: var(--cor1);
 }
 
 th, td , caption{
@@ -48,7 +50,7 @@ th, td , caption{
     vertical-align: top;
     border: 1px solid #80808080;
     font-weight: 700;
-    background-color: #e7e7e7;
+    background-color: var(--cor1);
 }
 
 
@@ -62,8 +64,8 @@ button#cadastrar{
     height: 50px;
     font-size: 16px;
     font-weight: 600;
-    color: #ffffff;
-    background-color: #000000;
+    color: var(--white);
+    background-color: var(--black);
     border-radius: 10px;
     padding: 10px 30px;
     cursor: pointer;
