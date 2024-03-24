@@ -41,3 +41,4 @@ function exibirTabela(denuncias) {
   //Atribuindo "tabelaElement" à tabela real do HTML
   corpoTabela.innerHTML = tabelaElement;
 }
+
