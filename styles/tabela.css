@@ -1,15 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --cor1: ;
+    --cor2: ;
+    --cor3: ;
+}
+
 main{
     border: solid 3px red;
 }
 
 section{
     border: solid 3px blue;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 div{
     border: solid 3px green;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto; 
+    height: 70vh;
+    margin-top: 2.5px;
 }
 
 table{
     border: solid 3px yellow;
+
+    width: 85vw;
+    border-spacing: 0;
+    /* border: 1px solid #80808080; */
+    background-color: #e7e7e7;
+}
+
+th, td , caption{
+    padding: 15px;
+    line-height: 1.5;
+    vertical-align: top;
+    border: 1px solid #80808080;
+    font-weight: 700;
+    background-color: #e7e7e7;
+}
+
+
+td{
+    background-color: #ffffff;
+    
+}
+
+button#cadastrar{
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 10px 30px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+}
+
+
+button#cadastrar:hover{
+    transition : 717ms;
+    width: 210px;
+    height: 60px;
+    font-size: 19px;
+    transform : translateY(-0px);
 }
