@@ -1,11 +1,12 @@
 class DatabaseDenuncias {
-  _denuncias = [];
+  _denuncias = {};
 
   /**
    * Construtor da classe
    * @description Rrecupera os dados salvos no storage. Executado sempre que é criada uma nova instancia da classe (ou ao importar uma instancia)
    */
   constructor() {
+    localStorage.clear();
     this._denuncias = this._carregarDenunciasDoStorage(); //carrega os dados salvos do storage
   }
 
@@ -24,7 +25,7 @@ class DatabaseDenuncias {
    */
   _salvarDenunciasNoStorage() {
     const strDenuncias = JSON.stringify(this._denuncias);
-    localStorage.setItem("denuncias", strDenuncias);
+    localStorage.setItem("denuncias", JSON.stringify(this._denuncias));
   }
 
   /**
@@ -36,7 +37,7 @@ class DatabaseDenuncias {
     const denuciasStorage = localStorage.getItem("denuncias");
 
     if (denuciasStorage) return JSON.parse(denuciasStorage);
-    return [];
+    return {};
   }
 
   /**
@@ -49,7 +50,7 @@ class DatabaseDenuncias {
 
     this._denuncias[denunciaId] = denuncia;
 
-    this._salvarDenunciasNoStorage(); //Salva no storage a cada modificação
+    localStorage.setItem("denuncias", JSON.stringify(this._denuncias));
   }
 
   /**
