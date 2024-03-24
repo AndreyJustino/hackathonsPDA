@@ -68,6 +68,7 @@ class DatabaseDenuncias {
    */
   deletarDenuncia(denunciaId) {
     this._denuncias[denunciaId] = {};
+    this._salvarDenunciasNoStorage();
   }
 }
 
