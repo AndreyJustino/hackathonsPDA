@@ -31,8 +31,8 @@ class DatabaseDenuncias {
   }
 
   /**
-   * Função para obter denuncias
-   * @description Função que retorna todas as denúncias salvas
+   * Função para deletar denuncia
+   * @description Função que deleta uma denuncia com base no id
    * @param {number} denunciaId Id da denúncia que será apagada
    */
   deletarDenuncia(denunciaId) {
