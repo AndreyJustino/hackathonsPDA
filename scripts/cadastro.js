@@ -19,28 +19,30 @@ function estaVazio(str) {
  * @param {Event} e Evento de click, é importante para que evitemos o refresh da pagina via submit
  */
 function cadastrarDenuncia(e) {
-  const nome = nomeInput.value;
   const email = emailInput.value;
-  const tipo = tipoInput.value;
+  const endereco = enderecoInput.value;
+  e.preventDefault(); //Evita que a página seja atualizada pelo 'submit'
 
-  if (estaVazio(nome) || estaVazio(email) || estaVazio(tipo)) {
+  const tipo = tipoSelect.value;
+
+  if (estaVazio(endereco) || estaVazio(email)) {
     return false;
   }
 
-  e.preventDefault(); //Evita que a página seja atualizada pelo 'submit'
-
   //Objeto que salva as infos dos inputs para salvamento posterior no database
-  const denuncia = { nome, email, tipo };
+  const denuncia = { email, endereco, tipo };
 
   //Chamando o metodo do database para salvamento da denuncia
   databaseDenuncias.cadastrarDenuncia(denuncia);
-  console.log(databaseDenuncias.obterDenuncias());
+  // console.log(Object.values(databaseDenuncias.obterDenuncias()));
 }
 
 //Obtendo inputs
-const nomeInput = document.getElementById("input-nome");
 const emailInput = document.getElementById("input-email");
-const tipoInput = document.getElementById("input-tipo");
+const enderecoInput = document.getElementById("input-endereco");
+
+//Select
+const tipoSelect = document.getElementById("select-tipo");
 
 //Obtendo botao de "submit"
 const denunciarButton = document.getElementById("button-denunciar");

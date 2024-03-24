@@ -11,9 +11,9 @@
   <body>
     <form action="">
       <h2>Cadastro de Denúncia</h2>
-
+      <!-- 
       <label for="input-nome">Nome:</label>
-      <input type="text" id="input-nome" required />
+      <input type="text" id="input-nome" required /> -->
 
       <label for="input-email">Email:</label>
       <input
@@ -23,8 +23,22 @@
         pattern="[\w]*[@][\w]+[\\.][\w]+[\w]+"
       />
 
-      <label for="input-tipo">Tipo:</label>
-      <input type="text" id="input-tipo" required />
+      <label for="input-endereco">Local:</label>
+      <input type="text" required id="input-endereco" />
+
+      <label for="select-tipo">Tipo:</label>
+      <select name="select-tipo" id="select-tipo">
+        <option value="Infraestrutura">
+          Infraestrutura - Buraco na pista, Semaforo quebrado...
+        </option>
+        <option value="Hidraulico">
+          Hidraulico - Cano estourado, esgoto exposto...
+        </option>
+        <option value="Elétrico">
+          Elétrico - Fios soltos, postes quebrados...
+        </option>
+        <option value="Outro">Outro...</option>
+      </select>
 
       <button id="button-denunciar">Denunciar</button>
     </form>
