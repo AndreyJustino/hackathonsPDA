@@ -16,7 +16,12 @@
       <input type="text" id="input-nome" required />
 
       <label for="input-email">Email:</label>
-      <input type="text" id="input-email" required />
+      <input
+        type="text"
+        id="input-email"
+        required
+        pattern="[\w]*[@][\w]+[\\.][\w]+[\w]+"
+      />
 
       <label for="input-tipo">Tipo:</label>
       <input type="text" id="input-tipo" required />
