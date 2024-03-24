@@ -6,6 +6,7 @@ class DatabaseDenuncias {
    * @description Rrecupera os dados salvos no storage. Executado sempre que é criada uma nova instancia da classe (ou ao importar uma instancia)
    */
   constructor() {
+
     this._denuncias = this._carregarDenunciasDoStorage(); //carrega os dados salvos do storage
   }
 

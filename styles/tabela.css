@@ -51,22 +51,24 @@ td{
     
 }
 
-button#cadastrar{
-    width: 200px;
+a#cadastrar{
+    width: 150px;
     height: 50px;
     font-size: 16px;
     font-weight: 600;
     color: var(--white);
     background-color: var(--black);
     border-radius: 10px;
-    padding: 10px 30px;
+    padding: 15px 0 0 0;
     cursor: pointer;
     border: none;
     margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
 }
 
 
-button#cadastrar:hover{
+a#cadastrar:hover{
     transition : 717ms;
     width: 210px;
     height: 60px;
