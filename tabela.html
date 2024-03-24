@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabela Denuncia</title>
+
+    <link rel="stylesheet" href="/styles/reset.css" />
+
+    <link rel="stylesheet" href="./styles/variaveis.css" />
+    <link rel="stylesheet" href="./styles/tabela.css" />
+  </head>
+  <body id="body">
+    <main id="principal" class="principal">
+      <section id="container-cadastro" class="container-cadastro">
+        <div>
+          <table id="tabela-denuncia">
+            <caption>
+              Denuncias Cadastradas
+            </caption>
+
+            <thead>
+              <tr>
+                <th class="id">Email</th>
+                <th class="nome">Endereço</th>
+                <th class="cargo">Tipo</th>
+              </tr>
+            </thead>
+            <tbody id="corpo-tabela"></tbody>
+          </table>
+        </div>
+        <a id="cadastrar" href="./cadastro.html">Cadastrar nova denuncia</a>
+      </section>
+    </main>
+    <script type="module" src="scripts/tabela.js"></script>
+  </body>
+</html>
