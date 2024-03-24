@@ -7,10 +7,10 @@ body.addEventListener("load", main())
 function main(){
     
     const denuncias = databaseDenuncias.obterDenuncias() // verificar se é um objeto de objetos
+    const denunciaArray = Object.values(denuncias)
+    console.log(denunciaArray)
 
-    // const denunciaArray = Object.values(denuncias)
-
-    // exibirTabela(denunciaArray)
+    exibirTabela(denunciaArray)
 
 }
 
@@ -20,7 +20,7 @@ function exibirTabela(denuncia){
 
         const tr = `
         <tr id="element_${index}">
-            <td class="id">${element.id}</td>
+            <td class="email">${element.email}</td>
             <td class="endereco">${element.endereco}</td>
             <td class="tipo">${element.tipo}</td>
         </tr>
