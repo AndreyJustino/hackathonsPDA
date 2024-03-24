@@ -1,30 +1,44 @@
+//Importando a instancia do database
 import databaseDenuncias from "./database/database.js";
-const body = document.getElementById("body")
-let corpoTabela = document.getElementById("corpoTabela")
 
-body.addEventListener("load", main())
+const corpoTabela = document.getElementById("corpo-tabela");
 
-function main(){
-    
-    const denuncias = databaseDenuncias.obterDenuncias() // verificar se é um objeto de objetos
-    const denunciaArray = Object.values(denuncias)
+//Chama main ao carregar a page
+document.body.addEventListener("load", main());
 
-    exibirTabela(denunciaArray)
+/**
+ * Função inicial
+ * @description Função que inicia ao carregar a page, carrega os dados do localStorage/database e chama "exibirTabela"
+ */
+function main() {
+  const denuncias = databaseDenuncias.obterDenuncias(); //Recupera as denuncias do databse
+  const denunciasArray = Object.values(denuncias); //Converte o objeto "denuncias" para um array
 
+  //Inicia a construção da tabela
+  exibirTabela(denunciasArray);
 }
 
-function exibirTabela(denuncia){
-    
-    denuncia.forEach((element, index) => {
+/**
+ * Função que constroi a tabela
+ * @description Função que constroi tabela usando o elemento table com base no array extraido do localStorage
+ * @param {Array} denuncias O array com as denuncias que estão salvas e serão exibidas
+ */
+function exibirTabela(denuncias) {
+  let tabelaElement = ""; //Variavel de controle para evitar o uso constante de "innerHTML"
 
-        const tr = `
+  denuncias.forEach(({ email, endereco, tipo }, index) => {
+    //Estrutura básica do item da tabela
+    const denunciaItem = `
         <tr id="element_${index}">
-            <td class="email">${element.email}</td>
-            <td class="endereco">${element.endereco}</td>
-            <td class="tipo">${element.tipo}</td>
-        </tr>
-        `
-        corpoTabela.innerHTML += tr
-    });
+            <td class="email">${email}</td>
+            <td class="endereco">${endereco}</td>
+            <td class="tipo">${tipo}</td>
+        </tr>`;
+
+    tabelaElement += denunciaItem;
+  });
+
+  //Atribuindo "tabelaElement" à tabela real do HTML
+  corpoTabela.innerHTML = tabelaElement;
 }
 
