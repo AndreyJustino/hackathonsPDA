@@ -2,12 +2,41 @@ class DatabaseDenuncias {
   _denuncias = {};
 
   /**
+   * Construtor da classe
+   * @description Rrecupera os dados salvos no storage. Executado sempre que é criada uma nova instancia da classe (ou ao importar uma instancia)
+   */
+  constructor() {
+    this._denuncias = this._carregarDenunciasDoStorage(); //carrega os dados salvos do storage
+  }
+
+  /**
    * Função para gerar ID
    * @description Função que gera um ID único com base no timestamp atual e o retorna
    * @returns {number} ID único baseado no timestamp
    */
   _obterId() {
     return Date.now();
+  }
+
+  /**
+   * Função que salva as denúncias no localStorage
+   * @description Função que salva as denuncias com string no localStorage para persistencia de dados
+   */
+  _salvarDenunciasNoStorage() {
+    const strDenuncias = JSON.stringify(this._denuncias);
+    localStorage.setItem("denuncias", strDenuncias);
+  }
+
+  /**
+   * Função que recupera as denúncias do localStorage
+   * @description Função que recupea as denuncias e as retorna já como objeto
+   * @returns {object} As denuncias salvas ou um objeto vazio caso nao exista dados salvos
+   */
+  _carregarDenunciasDoStorage() {
+    const denuciasStorage = localStorage.getItem("denuncias");
+
+    if (denuciasStorage) return JSON.parse(denuciasStorage);
+    return {};
   }
 
   /**
@@ -19,6 +48,8 @@ class DatabaseDenuncias {
     const denunciaId = this._obterId();
 
     this._denuncias[denunciaId] = denuncia;
+
+    this._salvarDenunciasNoStorage(); //Salva no storage a cada modificação
   }
 
   /**
@@ -37,6 +68,7 @@ class DatabaseDenuncias {
    */
   deletarDenuncia(denunciaId) {
     this._denuncias[denunciaId] = {};
+    this._salvarDenunciasNoStorage();
   }
 }
 
