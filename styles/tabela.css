@@ -1,0 +1,15 @@
+main{
+    border: solid 3px red;
+}
+
+section{
+    border: solid 3px blue;
+}
+
+div{
+    border: solid 3px green;
+}
+
+table{
+    border: solid 3px yellow;
+}
