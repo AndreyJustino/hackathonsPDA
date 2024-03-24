@@ -1,5 +1,5 @@
 class DatabaseDenuncias {
-  _denuncias = {};
+  _denuncias = [];
 
   /**
    * Construtor da classe
@@ -36,7 +36,7 @@ class DatabaseDenuncias {
     const denuciasStorage = localStorage.getItem("denuncias");
 
     if (denuciasStorage) return JSON.parse(denuciasStorage);
-    return {};
+    return [];
   }
 
   /**
