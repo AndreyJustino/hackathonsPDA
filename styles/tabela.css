@@ -4,14 +4,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-:root{
-    --white: #ffffff;
-    --black: #000000;
-    --cor1: #e7e7e7;
-    --cor2: ;
-    --cor3: ;
-}
-
 main{
     border: solid 3px red;
 }
