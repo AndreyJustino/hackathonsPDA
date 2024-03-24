@@ -27,8 +27,16 @@ class DatabaseDenuncias {
    * @returns {object} Lista de denúncias
    */
   obterDenuncias() {
-    console.log(this._denuncias);
     return this._denuncias;
+  }
+
+  /**
+   * Função para obter denuncias
+   * @description Função que retorna todas as denúncias salvas
+   * @param {number} denunciaId Id da denúncia que será apagada
+   */
+  deletarDenuncia(denunciaId) {
+    this._denuncias[denunciaId] = {};
   }
 }
 
