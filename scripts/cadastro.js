@@ -31,9 +31,8 @@ function estaVazio(str) {
 /**
  * Função de evento para cadastro de denúncia
  * @description Função que captura as infos dos inputs e chama "cadastrarDenuncia" do database
- * @param {Event} e Evento de click, é importante para que evitemos o refresh da pagina via submit
  */
-function cadastrarDenuncia(e) {
+function cadastrarDenuncia() {
   const email = emailInput.value;
   const endereco = enderecoInput.value;
 
@@ -43,7 +42,6 @@ function cadastrarDenuncia(e) {
     return false;
   }
 
-  e.preventDefault(); //Evita que a página seja atualizada pelo 'submit'
   //Objeto que salva as infos dos inputs para salvamento posterior no database
   const denuncia = { email, endereco, tipo };
 
