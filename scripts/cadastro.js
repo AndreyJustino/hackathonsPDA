@@ -3,6 +3,11 @@
 //Padrao singleton
 import databaseDenuncias from "./database/database.js";
 
+function irParaPaginaDeDenuncias(evt) {
+  evt.preventDefault();
+  window.location.href = "./tabela.html";
+}
+
 /**
  * Função de checagem de string vazia
  * @description Função que retorna se o string é vazia
@@ -21,7 +26,6 @@ function estaVazio(str) {
 function cadastrarDenuncia(e) {
   const email = emailInput.value;
   const endereco = enderecoInput.value;
-  e.preventDefault(); //Evita que a página seja atualizada pelo 'submit'
 
   const tipo = tipoSelect.value;
 
@@ -29,6 +33,7 @@ function cadastrarDenuncia(e) {
     return false;
   }
 
+  e.preventDefault(); //Evita que a página seja atualizada pelo 'submit'
   //Objeto que salva as infos dos inputs para salvamento posterior no database
   const denuncia = { email, endereco, tipo };
 
@@ -47,3 +52,7 @@ const tipoSelect = document.getElementById("select-tipo");
 //Obtendo botao de "submit"
 const denunciarButton = document.getElementById("button-denunciar");
 denunciarButton.addEventListener("click", cadastrarDenuncia); //Atribuindo o evento ao botao
+
+//Obtendo o botao "Ver denuncias"
+const verDenunciasButton = document.getElementById("button-tabela");
+verDenunciasButton.addEventListener("click", irParaPaginaDeDenuncias);
