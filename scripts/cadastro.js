@@ -3,6 +3,16 @@
 //Padrao singleton
 import databaseDenuncias from "./database/database.js";
 
+function selecionarPosicaoNoMapa(e) {
+  const cliquePosX = e.offsetX;
+  const cliquePosY = e.offsetY;
+
+  mapaMarcador.style.top = cliquePosY + "px";
+  mapaMarcador.style.left = cliquePosX + "px";
+
+  enderecoInput.value = `Localização = X: ${cliquePosX} e Y: ${cliquePosY}`;
+}
+
 function irParaPaginaDeDenuncias(evt) {
   evt.preventDefault();
   window.location.href = "./tabela.html";
@@ -56,3 +66,8 @@ denunciarButton.addEventListener("click", cadastrarDenuncia); //Atribuindo o eve
 //Obtendo o botao "Ver denuncias"
 const verDenunciasButton = document.getElementById("button-tabela");
 verDenunciasButton.addEventListener("click", irParaPaginaDeDenuncias);
+
+const mapaContainer = document.querySelector(".container-mapa");
+mapaContainer.addEventListener("click", selecionarPosicaoNoMapa);
+
+const mapaMarcador = document.querySelector(".container-mapa__marcador");

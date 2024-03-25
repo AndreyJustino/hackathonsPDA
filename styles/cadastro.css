@@ -3,12 +3,16 @@ body {
   place-items: center;
 
   width: 100vw;
-  height: 100vmin;
+  height: 100vh;
 }
 
 form {
   display: flex;
   flex-direction: column;
+
+  box-sizing: border-box;
+
+  width: 300px;
 
   gap: 10px;
 
@@ -19,10 +23,41 @@ form {
   padding: 15px;
 }
 
+img {
+  width: 100%;
+}
+
 h2 {
   text-align: center;
 }
 
 label {
   margin-bottom: -10px;
+}
+
+.container-mapa {
+  display: flex;
+  width: 100%;
+
+  box-sizing: border-box;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.container-mapa__marcador {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 99px;
+
+  background-color: red;
+  outline: 1px dashed rgb(255, 255, 255);
+  outline-offset: 5px;
 }

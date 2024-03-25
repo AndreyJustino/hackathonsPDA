@@ -23,8 +23,19 @@
         pattern="[\w]*[@][\w]+[\\.][\w]+[\w]+"
       />
 
-      <label for="input-endereco">Local:</label>
-      <input type="text" required id="input-endereco" />
+      <label for="container-mapa">Local:</label>
+      <div id="container-mapa" class="container-mapa">
+        <div id="marcador" class="container-mapa__marcador"></div>
+        <img src="/assets/images/map.png" alt="imagem do mapa" />
+      </div>
+
+      <input
+        type="text"
+        value="Localização = X: 0 e Y: 0"
+        required
+        id="input-endereco"
+        disabled
+      />
 
       <label for="select-tipo">Tipo:</label>
       <select name="select-tipo" id="select-tipo">
