@@ -3,16 +3,29 @@
 //Padrao singleton
 import databaseDenuncias from "./database/database.js";
 
+/**
+ * Função de clique no mapa
+ * @description Função que é chamada ao clicar no mapa, ela move o marcador e tambem muda o "value" do input endereco
+ * @param {Event} e Evento de clique, é de onde são tiradas as infos de clique
+ */
 function selecionarPosicaoNoMapa(e) {
+  //Obtendo as posições
   const cliquePosX = e.offsetX;
   const cliquePosY = e.offsetY;
 
+  //Mudando o marcador de lugar
   mapaMarcador.style.top = cliquePosY + "px";
   mapaMarcador.style.left = cliquePosX + "px";
 
+  //Atualizando o value do input
   enderecoInput.value = `Localização = X: ${cliquePosX} e Y: ${cliquePosY}`;
 }
 
+/**
+ * Função que mostra a tabela ao usuario
+ * @description Função que leva o usuário para pagina de denuncias
+ * @param {Event} evt //Evento recebido ao clicar no botao, é necessario para o preventDefault
+ */
 function irParaPaginaDeDenuncias(evt) {
   evt.preventDefault();
   window.location.href = "./tabela.html";
