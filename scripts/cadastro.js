@@ -23,6 +23,7 @@ function irParaPaginaDeDenuncias(evt) {
  * @description Função que captura as infos dos inputs e chama "cadastrarDenuncia" do database
  */
 function cadastrarDenuncia() {
+  //Obtendo valores dos inputs
   const email = emailInput.value;
   const endereco = enderecoInput.value;
 
@@ -44,8 +45,8 @@ const enderecoInput = document.getElementById("input-endereco");
 const tipoSelect = document.getElementById("select-tipo");
 
 //Obtendo botao de "submit"
-const denunciarButton = document.getElementById("button-denunciar");
-denunciarButton.addEventListener("click", cadastrarDenuncia); //Atribuindo o evento ao botao
+const formCadastro = document.getElementById("form-cadastro-denuncias");
+formCadastro.addEventListener("submit", cadastrarDenuncia); //Atribuindo o evento ao form
 
 //Obtendo o botao "Ver denuncias"
 const verDenunciasButton = document.getElementById("button-tabela");
