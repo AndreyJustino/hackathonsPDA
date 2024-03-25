@@ -13,8 +13,11 @@
     />
 
     <link rel="stylesheet" href="styles/cadastro.css" />
+
+    <link rel="stylesheet" href="styles/cadastro.css" />
   </head>
   <body>
+    <form class="card">
     <form class="card">
       <h2>Cadastro de Denúncia</h2>
       <!-- 
@@ -22,21 +25,26 @@
       <input type="text" id="input-nome" required /> -->
 
       <label class="are-small" for="input-email">Email:</label>
+      <label class="are-small" for="input-email">Email:</label>
       <input
+        class="input is-small"
+        type="email"
         class="input is-small"
         type="email"
         id="input-email"
         required
         pattern="[\w]*[@][\w]+[\\.][\w]+[\w]+"
         placeholder="meuemail@email.com"
+        placeholder="meuemail@email.com"
       />
 
-      <div id="container-mapa" class="container-mapa">
+      <div class="container-mapa">
         <div id="marcador" class="container-mapa__marcador"></div>
         <img src="/assets/images/map.png" alt="imagem do mapa" />
       </div>
 
       <input
+        class="input is-small"
         class="input is-small"
         type="text"
         value="Localização = X: 0 e Y: 0"
@@ -46,7 +54,7 @@
       />
 
       <label for="select-tipo">Tipo:</label>
-      <select class="select is-small" name="select-tipo" id="select-tipo">
+      <select class="select is-small" class="select is-small" name="select-tipo" id="select-tipo">
         <option value="Infraestrutura">
           Infraestrutura - Buraco na pista, Semaforo quebrado...
         </option>
@@ -59,6 +67,16 @@
         <option value="Outro">Outro...</option>
       </select>
 
+      <button
+        class="button is-small is-danger"
+        type="submit"
+        id="button-denunciar"
+      >
+        Denunciar
+      </button>
+      <button class="button is-small is-link is-inverted" id="button-tabela">
+        Ver denuncias
+      </button>
       <button
         class="button is-small is-danger"
         type="submit"

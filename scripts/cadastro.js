@@ -19,16 +19,6 @@ function irParaPaginaDeDenuncias(evt) {
 }
 
 /**
- * Função de checagem de string vazia
- * @description Função que retorna se o string é vazia
- * @param {string} str string a ser checada
- * @returns {boolean} Boleano que "diz" se a string é vazia ou não
- */
-function estaVazio(str) {
-  return str == "";
-}
-
-/**
  * Função de evento para cadastro de denúncia
  * @description Função que captura as infos dos inputs e chama "cadastrarDenuncia" do database
  */
@@ -37,10 +27,6 @@ function cadastrarDenuncia() {
   const endereco = enderecoInput.value;
 
   const tipo = tipoSelect.value;
-
-  if (estaVazio(endereco) || estaVazio(email)) {
-    return false;
-  }
 
   //Objeto que salva as infos dos inputs para salvamento posterior no database
   const denuncia = { email, endereco, tipo };
@@ -65,7 +51,9 @@ denunciarButton.addEventListener("click", cadastrarDenuncia); //Atribuindo o eve
 const verDenunciasButton = document.getElementById("button-tabela");
 verDenunciasButton.addEventListener("click", irParaPaginaDeDenuncias);
 
+//Obtendo o container do mapa e registrando o evento de clique nele
 const mapaContainer = document.querySelector(".container-mapa");
 mapaContainer.addEventListener("click", selecionarPosicaoNoMapa);
 
+//Obtendo o marcador de posição do html
 const mapaMarcador = document.querySelector(".container-mapa__marcador");
