@@ -4,30 +4,43 @@
 import databaseDenuncias from "./database/database.js";
 
 /**
- * Função de checagem de string vazia
- * @description Função que retorna se o string é vazia
- * @param {string} str string a ser checada
- * @returns {boolean} Boleano que "diz" se a string é vazia ou não
+ * Função de clique no mapa
+ * @description Função que é chamada ao clicar no mapa, ela move o marcador e tambem muda o "value" do input endereco
+ * @param {Event} e Evento de clique, é de onde são tiradas as infos de clique
  */
-function estaVazio(str) {
-  return str == "";
+function selecionarPosicaoNoMapa(e) {
+  //Obtendo as posições
+  const cliquePosX = e.offsetX;
+  const cliquePosY = e.offsetY;
+
+  //Mudando o marcador de lugar
+  mapaMarcador.style.top = cliquePosY + "px";
+  mapaMarcador.style.left = cliquePosX + "px";
+
+  //Atualizando o value do input
+  enderecoInput.value = `Localização = X: ${cliquePosX} e Y: ${cliquePosY}`;
+}
+
+/**
+ * Função que mostra a tabela ao usuario
+ * @description Função que leva o usuário para pagina de denuncias
+ * @param {Event} evt //Evento recebido ao clicar no botao, é necessario para o preventDefault
+ */
+function irParaPaginaDeDenuncias(evt) {
+  evt.preventDefault();
+  window.location.href = "./tabela.html";
 }
 
 /**
  * Função de evento para cadastro de denúncia
  * @description Função que captura as infos dos inputs e chama "cadastrarDenuncia" do database
- * @param {Event} e Evento de click, é importante para que evitemos o refresh da pagina via submit
  */
-function cadastrarDenuncia(e) {
+function cadastrarDenuncia() {
+  //Obtendo valores dos inputs
   const email = emailInput.value;
   const endereco = enderecoInput.value;
-  e.preventDefault(); //Evita que a página seja atualizada pelo 'submit'
 
   const tipo = tipoSelect.value;
-
-  if (estaVazio(endereco) || estaVazio(email)) {
-    return false;
-  }
 
   //Objeto que salva as infos dos inputs para salvamento posterior no database
   const denuncia = { email, endereco, tipo };
@@ -45,5 +58,16 @@ const enderecoInput = document.getElementById("input-endereco");
 const tipoSelect = document.getElementById("select-tipo");
 
 //Obtendo botao de "submit"
-const denunciarButton = document.getElementById("button-denunciar");
-denunciarButton.addEventListener("click", cadastrarDenuncia); //Atribuindo o evento ao botao
+const formCadastro = document.getElementById("form-cadastro-denuncias");
+formCadastro.addEventListener("submit", cadastrarDenuncia); //Atribuindo o evento ao form
+
+//Obtendo o botao "Ver denuncias"
+const verDenunciasButton = document.getElementById("button-tabela");
+verDenunciasButton.addEventListener("click", irParaPaginaDeDenuncias);
+
+//Obtendo o container do mapa e registrando o evento de clique nele
+const mapaContainer = document.querySelector(".container-mapa");
+mapaContainer.addEventListener("click", selecionarPosicaoNoMapa);
+
+//Obtendo o marcador de posição do html
+const mapaMarcador = document.querySelector(".container-mapa__marcador");
