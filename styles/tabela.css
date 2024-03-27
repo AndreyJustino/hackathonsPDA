@@ -16,11 +16,12 @@ div{
     align-items: center;
     overflow: auto; 
     height: 70vh;
-    margin-top: 2.5px;
+    width: 95vw;
+    margin-top: 10px;
 }
 
 table{
-    width: 85vw;
+    width: 100%;
     border-spacing: 0;
     border: 1px solid #80808080;
     background-color: var(--cor1);
@@ -33,6 +34,7 @@ th, td , caption{
     border: 1px solid #80808080;
     font-weight: 700;
     background-color: var(--cor1);
+    text-align: center;
 }
 
 td{
@@ -62,4 +64,10 @@ a#cadastrar:hover{
     height: 60px;
     font-size: 19px;
     transform : translateY(-0px);
+}
+
+@media screen and (max-width: 440px) {
+    th, td , caption{
+        font-size: small;
+    }
 }
