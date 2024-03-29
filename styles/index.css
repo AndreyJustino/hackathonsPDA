@@ -1,4 +1,4 @@
- header {
+header {
     background-color: #708645;
     width: 150%;
     height: 105px;
@@ -57,9 +57,6 @@ h1 {
     font-size: 60px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 15px;
-    text-align: left;
-    justify-content: left;
-    width: 1300px;
 }
 
 p {
@@ -91,10 +88,9 @@ p {
     float: right; 
     width: 70%; 
     height: auto;
-    margin-right: -950px;
+    margin-right: -300px;
     justify-content: right;
-    margin-top: -295px;
-   
+    margin-top: -455px;
 }
 
 .sobre-nos { 
@@ -196,7 +192,7 @@ h3 {
     justify-content: center;
     margin-left: 860px;
     margin-top: 100px;
-    margin-bottom: 140px;
+    margin-bottom: 110px;
 }
 
 .a-button {
@@ -251,5 +247,4 @@ h1 {
     margin-right: -150px;
     margin-top: 600px;
 }
-
 
