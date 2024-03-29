@@ -1,0 +1,255 @@
+ header {
+    background-color: #708645;
+    width: 150%;
+    height: 105px;
+    margin: 0%;
+    padding: 20px;
+    margin-top: -10px;
+}
+
+.logo-reporte {
+    height: 300%;
+    margin-top: -90px;
+ 
+}
+
+.quem {
+   margin-top: -185px;
+   margin-left: 720px;
+   color: white;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.ja {
+    margin-top: -42px;
+    margin-left: 999px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.apoie {
+    margin-top: -41px;
+    margin-left: 1300px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button1-html {
+    background-color: #99948F;
+    padding: 20px;
+    width: 150px;
+    border-radius: 15px;
+    margin-left: 1600px;
+    margin-top: 10px;
+    position: absolute;
+    top: 30px;
+}
+
+.reportar {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
+h1 {
+    color: white;
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 15px;
+    text-align: left;
+    justify-content: left;
+    width: 1300px;
+}
+
+p {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.button2-html {
+    background-color: grey;
+    border-radius: 25px;
+    padding: 25px;
+    margin-top: 90px;
+}
+
+.button-a {
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bem-vindo {
+    padding: 200px;
+}
+
+.area-img {
+    float: right; 
+    width: 70%; 
+    height: auto;
+    margin-right: -950px;
+    justify-content: right;
+    margin-top: -295px;
+   
+}
+
+.sobre-nos { 
+   padding: 50px;
+   padding: 200px;
+}
+
+body {
+background-color: #44312B;
+}
+
+
+.h1-sobre-nos {
+    font-size: 90px;
+    margin-right: 580px;
+}
+
+.sobre-nos p {
+    text-align: left;
+    margin-bottom: 100px;
+    font-size: 22px;
+}
+
+.celular {
+    float: right;
+    margin-bottom: 100px;
+    margin-top: -850px;
+    width: 640px;
+    margin-right: -400;
+    
+}
+
+.como-funciona {
+    background-color: #708645;
+    padding: 200px;
+    margin-right: -100px;
+}
+
+.como-funciona .p {
+    color: white;
+}
+
+h2 {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    margin-top: -50px;
+}
+
+h4 {
+    color: white;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: #44312B;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h3 {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flexbox;
+}
+
+.porque-h2 {
+    color: #44312B;
+    font-size: 30px;
+
+}
+
+.p1 {
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 25px;
+   margin-top: 100px;
+}
+
+.p2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin-top: 60px;
+}
+
+.p3 {
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 25px;
+   margin-top: 60px;
+}
+
+.button3-html {
+    
+    color: aliceblue;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: center;
+    margin-left: 860px;
+    margin-top: 100px;
+    margin-bottom: 140px;
+}
+
+.a-button {
+    font-size: large;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.contato {
+    padding: 200px;
+}
+
+.imagem-cidade {
+    float: left; 
+    width: 70%; 
+    height: auto;
+    margin-left: -400px;
+    justify-content: left;
+    margin-top: 100px;
+}
+
+.facebook {
+   width: 80px;
+   float: right;
+   margin-top: 950px;
+}
+
+
+h1 {
+    justify-content: right;
+    float: right;
+    margin-right: 170px;
+    margin-top: 200px;
+
+}
+
+.contato-p1 {
+    justify-content: right;
+    float: right;
+    margin-right: -290px;
+    margin-top: 500px;
+}
+
+.contato-p2 {
+    justify-content: right;
+    float: right;
+    margin-right: -150px;
+    margin-top: 600px;
+}
+
+
