@@ -1,10 +1,11 @@
-header {
+ header {
     background-color: #708645;
     width: 150%;
     height: 105px;
-    margin: 0%;
+    margin: auto;
     padding: 20px;
     margin-top: -10px;
+
 }
 
 .logo-reporte {
@@ -15,35 +16,37 @@ header {
 
 .quem {
    margin-top: -185px;
-   margin-left: 720px;
+   margin-left: 420px;
    color: white;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .ja {
     margin-top: -42px;
-    margin-left: 999px;
+    margin-left: 699px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .apoie {
     margin-top: -41px;
-    margin-left: 1300px;
+    margin-left: 1000px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/*
 .button1-html {
-    background-color: #99948F;
+    background-color: ;
     padding: 20px;
     width: 150px;
     border-radius: 15px;
-    margin-left: 1600px;
+    margin-left: 1000px;
     margin-top: 10px;
     position: absolute;
     top: 30px;
 }
+
 
 .reportar {
     color: white;
@@ -51,26 +54,33 @@ header {
     text-decoration: none;
     
 }
+*/
 
 h1 {
     color: white;
     font-size: 60px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 15px;
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 150px;
 }
 
 p {
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-top: 50px;
+    margin-top: 100px;
+    margin-left: 150px;
     font-size: 20px;
+
 }
 
 .button2-html {
     background-color: grey;
     border-radius: 25px;
     padding: 25px;
+    margin-left: 150px;
     margin-top: 90px;
+    
 }
 
 .button-a {
@@ -81,17 +91,20 @@ p {
 }
 
 .bem-vindo {
-    padding: 200px;
+    padding: 100px;
 }
 
+/*
 .area-img {
     float: right; 
-    width: 70%; 
+    width: 110%; 
     height: auto;
-    margin-right: -300px;
+    margin-right: -860px;
     justify-content: right;
-    margin-top: -455px;
+    margin-top: -720px;
+    
 }
+*/
 
 .sobre-nos { 
    padding: 50px;
@@ -104,23 +117,24 @@ background-color: #44312B;
 
 
 .h1-sobre-nos {
-    font-size: 90px;
-    margin-right: 580px;
+    font-size: 70px;
+    margin-left: 40px;
 }
 
 .sobre-nos p {
     text-align: left;
     margin-bottom: 100px;
     font-size: 22px;
+    margin-left: 50px;
 }
 
 .celular {
     float: right;
     margin-bottom: 100px;
-    margin-top: -850px;
-    width: 640px;
-    margin-right: -400;
-    
+    margin-top: -990px;
+    width: 650px;
+    margin-right: -109px;
+
 }
 
 .como-funciona {
@@ -129,9 +143,11 @@ background-color: #44312B;
     margin-right: -100px;
 }
 
+/*
 .como-funciona .p {
     color: white;
 }
+*/
 
 h2 {
     color: white;
@@ -168,6 +184,8 @@ h3 {
    font-family: Arial, Helvetica, sans-serif;
    font-size: 25px;
    margin-top: 100px;
+   margin-left: 50px;
+  
 }
 
 .p2 {
@@ -175,6 +193,7 @@ h3 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
     margin-top: 60px;
+    margin-left: 50px;
 }
 
 .p3 {
@@ -182,6 +201,7 @@ h3 {
    font-family: Arial, Helvetica, sans-serif;
    font-size: 25px;
    margin-top: 60px;
+   margin-left: 50px;
 }
 
 .button3-html {
@@ -190,7 +210,7 @@ h3 {
     text-decoration: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     justify-content: center;
-    margin-left: 860px;
+    margin-left: 600px;
     margin-top: 100px;
     margin-bottom: 110px;
 }
@@ -210,6 +230,7 @@ h3 {
     padding: 200px;
 }
 
+/*
 .imagem-cidade {
     float: left; 
     width: 70%; 
@@ -218,6 +239,7 @@ h3 {
     justify-content: left;
     margin-top: 100px;
 }
+*/
 
 .facebook {
    width: 80px;
@@ -225,14 +247,15 @@ h3 {
    margin-top: 950px;
 }
 
-
-h1 {
-    justify-content: right;
-    float: right;
-    margin-right: 170px;
+/*
+.contato-h1 {
+    
+    margin-right: 800px;
     margin-top: 200px;
 
 }
+
+
 
 .contato-p1 {
     justify-content: right;
@@ -248,3 +271,4 @@ h1 {
     margin-top: 600px;
 }
 
+*/
