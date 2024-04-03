@@ -38,7 +38,7 @@ label {
   margin-bottom: -10px;
 }
 
-.container-mapa {
+.container-map {
   display: flex;
   width: 100%;
 
@@ -48,7 +48,7 @@ label {
   overflow: hidden;
 }
 
-.container-mapa__marcador {
+.container-map__marker{
   position: absolute;
 
   top: 50%;
