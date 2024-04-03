@@ -1,5 +1,5 @@
-class DatabaseDenuncias {
-  _denuncias = {};
+class ComplaintsDatabase {
+  #complaints;
 
   /**
    * Construtor da classe
@@ -7,7 +7,7 @@ class DatabaseDenuncias {
    */
   constructor() {
 
-    this._denuncias = this._carregarDenunciasDoStorage(); //carrega os dados salvos do storage
+    this.#complaints = this.#loadStorageComplaints(); //carrega os dados salvos do storage
   }
 
   /**
@@ -15,7 +15,7 @@ class DatabaseDenuncias {
    * @description Função que gera um ID único com base no timestamp atual e o retorna
    * @returns {number} ID único baseado no timestamp
    */
-  _obterId() {
+  #getUniqueId() {
     return Date.now();
   }
 
@@ -23,9 +23,9 @@ class DatabaseDenuncias {
    * Função que salva as denúncias no localStorage
    * @description Função que salva as denuncias com string no localStorage para persistencia de dados
    */
-  _salvarDenunciasNoStorage() {
-    const strDenuncias = JSON.stringify(this._denuncias);
-    localStorage.setItem("denuncias", JSON.stringify(this._denuncias));
+  #saveComplaintsInStorage() {
+    const strComplaints = JSON.stringify(this.#complaints);
+    localStorage.setItem("complaints", strComplaints);
   }
 
   /**
@@ -33,24 +33,24 @@ class DatabaseDenuncias {
    * @description Função que recupea as denuncias e as retorna já como objeto
    * @returns {object} As denuncias salvas ou um objeto vazio caso nao exista dados salvos
    */
-  _carregarDenunciasDoStorage() {
-    const denuciasStorage = localStorage.getItem("denuncias");
+  #loadStorageComplaints() {
+    const storageComplaints = localStorage.getItem("complaints");
 
-    if (denuciasStorage) return JSON.parse(denuciasStorage);
+    if (storageComplaints) return JSON.parse(storageComplaints);
     return {};
   }
 
   /**
    * Função para salvar denuncia
    * @description Função salva um objeto "denúncia" no database
-   * @param {object} denuncia Denúncia que será salva
+   * @param {object} complaint Denúncia que será salva
    */
-  cadastrarDenuncia(denuncia) {
-    const denunciaId = this._obterId();
+  registerComplaint(complaint) {
+    const complaintId = this.#getUniqueId();
 
-    this._denuncias[denunciaId] = denuncia;
+    this.#complaints[complaintId] = complaint;
 
-    localStorage.setItem("denuncias", JSON.stringify(this._denuncias));
+    localStorage.setItem("complaints", JSON.stringify(this.#complaints));
   }
 
   /**
@@ -58,20 +58,20 @@ class DatabaseDenuncias {
    * @description Função que retorna todas as denúncias salvas
    * @returns {object} Lista de denúncias
    */
-  obterDenuncias() {
-    return this._denuncias;
+  getComplaints() {
+    return this.#complaints;
   }
 
   /**
    * Função para deletar denuncia
    * @description Função que deleta uma denuncia com base no id
-   * @param {number} denunciaId Id da denúncia que será apagada
+   * @param {number} complaintId Id da denúncia que será apagada
    */
-  deletarDenuncia(denunciaId) {
-    this._denuncias[denunciaId] = {};
-    this._salvarDenunciasNoStorage();
+  deleteComplaint(complaintId) {
+    this.#complaints[complaintId] = {};
+    this.#saveComplaintsInStorage();
   }
 }
 
-const databaseDenuncias = new DatabaseDenuncias();
-export default databaseDenuncias;
+const complaintsDatabase = new ComplaintsDatabase();
+export default complaintsDatabase;
