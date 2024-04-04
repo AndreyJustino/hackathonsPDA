@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tabela Denuncia</title>
-
     <link rel="stylesheet" href="../styles/variaveis.css" />
     <link rel="stylesheet" href="../styles/tabela.css" />
   </head>
   <body id="body">
-    <main id="principal" class="principal">
+    <main id="main" class="main">
       <section id="registration-container" class="registration-container">
         <div>
           <table id="complaints-table">
@@ -20,14 +19,14 @@
             <thead>
               <tr>
                 <th class="id">Email</th>
-                <th class="nome">Endereço</th>
-                <th class="cargo">Tipo</th>
+                <th class="name">Endereço</th>
+                <th class="office">Tipo</th>
               </tr>
             </thead>
             <tbody id="complaints-table-body"></tbody>
           </table>
         </div>
-        <a id="cadastrar" href="../pages/cadastro.html">Cadastrar nova denuncia</a>
+        <a id="register" href="../pages/cadastro.html">Cadastrar nova denuncia</a>
       </section>
     </main>
     <script type="module" src="../scripts/tabela.js"></script>

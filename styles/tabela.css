@@ -41,7 +41,7 @@ td{
     background-color: var(--white); 
 }
 
-a#cadastrar{
+a#register{
     width: 150px;
     height: 50px;
     font-size: 16px;
@@ -58,7 +58,7 @@ a#cadastrar{
 }
 
 
-a#cadastrar:hover{
+a#register:hover{
     transition : 717ms;
     width: 210px;
     height: 60px;
