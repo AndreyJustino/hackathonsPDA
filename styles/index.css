@@ -36,12 +36,8 @@ nav ul li a {
   color: var(--white);
 }
 
-main {
-  width: 100vw;
-}
-
 .welcome {
-  /* border: 3px solid red; */
+  border: 3px solid red;
   color: var(--white);
   font-size: 1.5rem;
   min-height: 50vh;
@@ -77,6 +73,29 @@ main {
   height: 60px;
   font-size: 19px;
   transform: translateY(-0px);
+}
+
+.presentation {
+  border: 3px solid blue;
+  color: var(--white);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 15px;
+  gap: 10px;
+}
+
+.presentation div h1 {
+  font-size: 2.25rem;
+}
+
+@media screen and (max-width: 340px) {
+  .presentation img {
+    width: 170px;
+  }
 }
 
 /* header {
