@@ -61,7 +61,9 @@ const registrationForm = document.getElementById("form-registration-complaint");
 registrationForm.addEventListener("submit", registerComplaint); //Atribuindo o evento ao form
 
 //Obtendo o botao "Ver denuncias"
-const goToComplaintsPageButton = document.getElementById("button-goto-complaints");
+const goToComplaintsPageButton = document.getElementById(
+  "button-goto-complaints"
+);
 goToComplaintsPageButton.addEventListener("click", goToComplaintsPage);
 
 //Obtendo o container do mapa e registrando o evento de clique nele

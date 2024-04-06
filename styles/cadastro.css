@@ -48,7 +48,7 @@ label {
   overflow: hidden;
 }
 
-.container-map__marker{
+.container-map__marker {
   position: absolute;
 
   top: 50%;

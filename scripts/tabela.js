@@ -41,4 +41,3 @@ function showTable(complaints) {
   //Atribuindo "table" à tabela real do HTML
   complaintsTableBody.innerHTML = table;
 }
-
