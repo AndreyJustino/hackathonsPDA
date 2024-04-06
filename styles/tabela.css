@@ -4,8 +4,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background-color: var(--fundo);
+body {
+  background-color: var(--fundo);
 }
 
 header {
@@ -99,7 +99,7 @@ td {
   transform: translateY(-0px);
 }
 
-footer{
+footer {
   background-color: var(--black);
   color: var(--white);
   text-align: center;
@@ -111,7 +111,7 @@ footer h2 {
   font-size: 1.3rem;
 }
 
-footer ul{
+footer ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -120,7 +120,7 @@ footer ul{
   margin-top: 10px;
 }
 
-.esfera{
+.esfera {
   background-color: var(--white);
   border-radius: 50%;
   width: 50px;
@@ -129,14 +129,14 @@ footer ul{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  
 }
 
-.esfera:hover{
-  box-shadow: 0 0 10px .25rem var(--header);
+.esfera:hover {
+  box-shadow: 0 0 10px 0.25rem var(--header);
 }
 
-.icon-github,.icon-email{
+.icon-github,
+.icon-email {
   margin-top: 3px;
   width: 33px;
 }
