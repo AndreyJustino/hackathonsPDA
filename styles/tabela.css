@@ -75,7 +75,7 @@ td {
   background-color: var(--white);
 }
 
-a#register {
+#register {
   width: 150px;
   height: 50px;
   font-size: 16px;
@@ -91,12 +91,54 @@ a#register {
   text-decoration: none;
 }
 
-a#register:hover {
+#register:hover {
   transition: 717ms;
   width: 210px;
   height: 60px;
   font-size: 19px;
   transform: translateY(-0px);
+}
+
+footer{
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+footer h2 {
+  font-size: 1.3rem;
+}
+
+footer ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.esfera{
+  background-color: var(--white);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.esfera:hover{
+  box-shadow: 0 0 10px .25rem var(--header);
+}
+
+.icon-github,.icon-email{
+  margin-top: 3px;
+  width: 33px;
 }
 
 @media screen and (max-width: 440px) {
