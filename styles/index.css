@@ -37,7 +37,6 @@ nav ul li a {
 }
 
 .welcome {
-  border: 3px solid red;
   color: var(--white);
   font-size: 1.5rem;
   min-height: 50vh;
@@ -76,7 +75,6 @@ nav ul li a {
 }
 
 .presentation {
-  border: 3px solid blue;
   color: var(--white);
   font-size: 1.2rem;
   display: flex;
@@ -94,7 +92,6 @@ nav ul li a {
 
 .explanation {
   background-color: var(--header);
-  border: 3px solid yellow;
   color: var(--white);
   display: flex;
   flex-direction: column;
@@ -105,7 +102,6 @@ nav ul li a {
 }
 
 .container {
-  border: 3px solid aqua;
   width: 90vw;
   display: flex;
   flex-direction: row;
@@ -115,7 +111,6 @@ nav ul li a {
 }
 
 .card {
-  border: 3px solid orangered;
   width: 340px;
   display: flex;
   flex-direction: column;
