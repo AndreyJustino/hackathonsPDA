@@ -48,13 +48,13 @@ body {
     text-align: left;
     margin-left: 150px;
 }
- /* Estilos para os comentários */
+ 
 .Natasha,
 .Cleide,
 .Carlos {
     float: left;
-    width: 30%; /* Ajuste a largura conforme necessário */
-    margin: 20px 1.5%; /* Adiciona margem entre os blocos */
+    width: 30%; 
+    margin: 20px 1.5%; 
     text-align: center;
     
 }
@@ -98,8 +98,14 @@ body {
     margin-top: 300px;
 }
 
-/* Limpa estilos padrão */
+
 img {
     border: none;
     outline: none;
+}
+
+
+.a-quem {
+    color: white;
+    text-decoration: none;
 }
