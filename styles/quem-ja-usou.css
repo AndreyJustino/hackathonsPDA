@@ -1,0 +1,105 @@
+header {
+    background-color: #708645;
+    width: 150%;
+    height: 105px;
+    margin: auto;
+    padding: 20px;
+    margin-top: -10px;
+
+}
+
+body {
+    background-color: #44312B;
+}
+
+.report-logo {
+    height: 300%;
+    margin-top: -90px;
+}
+
+.start-page {
+    margin-top: -185px;
+    margin-left: 420px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+.who-we-are {
+    margin-top: -42px;
+    margin-left: 699px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.support {
+    margin-top: -41px;
+    margin-left: 1000px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.who-used {
+    color: white;
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 70px;
+    text-align: left;
+    margin-left: 150px;
+}
+ /* Estilos para os comentários */
+.Natasha,
+.Cleide,
+.Carlos {
+    float: left;
+    width: 30%; /* Ajuste a largura conforme necessário */
+    margin: 20px 1.5%; /* Adiciona margem entre os blocos */
+    text-align: center;
+    
+}
+
+.Natasha img,
+.Cleide img,
+.Carlos img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.Natasha p,
+.Cleide p,
+.Carlos p {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+   
+}
+
+.natasha-comment {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    margin-top: 300px;
+   
+}
+
+.cleide-comment {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin-top: 300px;
+}
+
+.carlos-comment {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin-top: 300px;
+}
+
+/* Limpa estilos padrão */
+img {
+    border: none;
+    outline: none;
+}
