@@ -1,7 +1,7 @@
 body {
   display: grid;
   place-items: center;
-  background-color: #44312B;
+
   width: 100vw;
   height: 100vmin;
 }
@@ -9,25 +9,20 @@ body {
 form {
   display: flex;
   flex-direction: column;
+
   gap: 10px;
-  background-color: #708645 ;
+
+  background-color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  border-radius: 25px;
-  padding: 100px;
+  border-radius: 5px;
+
+  padding: 15px;
 }
 
 h2 {
   text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 25px;
 }
 
 label {
   margin-bottom: -10px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-input {
-  padding: 10px;
-  border-radius: 20px;
 }
