@@ -3,22 +3,20 @@
 //Padrao singleton
 import complaintsDatabase from "./database/database.js";
 
-/**
- * Função de clique no mapa
- * @description Função que é chamada ao clicar no mapa, ela move o marcador e tambem muda o "value" do input address
- * @param {Event} e Evento de clique, é de onde são tiradas as infos de clique
- */
-function selectMapPosition(e) {
-  //Obtendo as posições
-  const clickPosX = e.offsetX;
-  const clickPosY = e.offsetY;
+function onSelectAddress({ latlng }) {
+  const reverseGeocodingUrl = `https://api.geoapify.com/v1/geocode/reverse?lat=${latlng.lat}&lon=${latlng.lng}&apiKey=${GEOAPIFY_API_KEY}`;
 
-  //Mudando o marcador de lugar
-  mapMarker.style.top = clickPosY + "px";
-  mapMarker.style.left = clickPosX + "px";
+  fetch(reverseGeocodingUrl)
+    .then((result) => result.json())
+    .then(changeAddressValue);
+}
 
-  //Atualizando o value do input
-  addressInput.value = `Localização = X: ${clickPosX} e Y: ${clickPosY}`;
+function changeAddressValue({ features }) {
+  if (features.length == 0)
+    return (addressInput.value = "Endereço não encontrado");
+
+  const addres = features[0].properties.formatted;
+  addressInput.value = addres;
 }
 
 /**
@@ -49,6 +47,9 @@ function registerComplaint() {
   complaintsDatabase.registerComplaint(complaint);
 }
 
+//a chave da api do geoapify
+var GEOAPIFY_API_KEY = "ef172e5aac494f98ad94e03ba0d41fb8";
+
 //Obtendo inputs
 const emailInput = document.getElementById("input-email");
 const addressInput = document.getElementById("input-address");
@@ -66,9 +67,32 @@ const goToComplaintsPageButton = document.getElementById(
 );
 goToComplaintsPageButton.addEventListener("click", goToComplaintsPage);
 
-//Obtendo o container do mapa e registrando o evento de clique nele
-const mapContainer = document.querySelector(".container-map");
-mapContainer.addEventListener("click", selectMapPosition);
+navigator.geolocation.getCurrentPosition(loadMap, () =>
+  alert("É necessária a permissão para usar o recurso de mapa")
+);
 
-//Obtendo o marcador de posição do html
-const mapMarker = document.querySelector(".container-map__marker");
+function loadMap({ coords }) {
+  var map = L.map("map").setView([coords.latitude, coords.longitude], 10);
+
+  var mapStyle = L.mapboxGL({
+    style: `https://maps.geoapify.com/v1/styles/klokantech-basic/style.json?apiKey=${GEOAPIFY_API_KEY}`,
+  });
+
+  const markerIcon = L.icon({
+    iconUrl: `https://api.geoapify.com/v1/icon/?type=material&color=red&icon=cloud&iconType=awesome&scaleFactor=2&apiKey=${GEOAPIFY_API_KEY}`,
+    iconSize: [31, 46], // size of the icon
+    iconAnchor: [15.5, 42], // point of the icon which will correspond to marker's location
+    popupAnchor: [0, -45], // point from which the popup should open relative to the iconAnchor
+  });
+
+  map.on("click", onSelectAddress);
+
+  const zooMarkerPopup = L.popup().setContent("This is Munich Zoo");
+
+  const zooMarker = L.marker([coords.latitude, coords.longitude], {
+    icon: markerIcon,
+  });
+  zooMarker.bindPopup(zooMarkerPopup).addTo(map);
+
+  mapStyle.addTo(map);
+}
