@@ -1,0 +1,56 @@
+header {
+    background-color: #708645;
+    width: 150%;
+    height: 105px;
+    margin: auto;
+    padding: 20px;
+    margin-top: -10px;
+
+}
+
+body {
+    background-color: #44312B;
+}
+
+.report-logo {
+    height: 300%;
+    margin-top: -90px;
+}
+
+.firstpage-way {
+    margin-top: -185px;
+   margin-left: 420px;
+   color: white;
+   font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+.users {
+    margin-top: -42px;
+    margin-left: 699px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.donation {
+    margin-top: -41px;
+    margin-left: 1000px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.who-we-are {
+    color: white;
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 70px;
+    text-align: left;
+    margin-left: 150px;
+}
+
+p {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 100px;
+    margin-left: 150px;
+    font-size: 20px;
+}
