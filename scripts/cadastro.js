@@ -3,14 +3,10 @@
 //Padrao singleton
 import complaintsDatabase from "./database/database.js";
 
-function onSelectAddress({ latlng }) {
-  const reverseGeocodingUrl = `https://api.geoapify.com/v1/geocode/reverse?lat=${latlng.lat}&lon=${latlng.lng}&apiKey=${GEOAPIFY_API_KEY}`;
-
-  marker.setLatLng(latlng);
-
-  fetch(reverseGeocodingUrl)
-    .then((result) => result.json())
-    .then(changeAddressValue);
+function onNotAllowingLocation() {
+  alert(
+    "É necessária a permissão para sabermos de onde voce está nos chamando"
+  );
 }
 
 function changeAddressValue({ features }) {
@@ -19,6 +15,20 @@ function changeAddressValue({ features }) {
 
   const addres = features[0].properties.formatted;
   addressInput.value = addres;
+}
+
+function moveMarker(latlng) {
+  marker.setLatLng(latlng);
+}
+
+function onSelectAddress({ latlng }) {
+  const reverseGeocodingUrl = `https://api.geoapify.com/v1/geocode/reverse?lat=${latlng.lat}&lon=${latlng.lng}&apiKey=${GEOAPIFY_API_KEY}`;
+
+  moveMarker();
+
+  fetch(reverseGeocodingUrl)
+    .then((result) => result.json())
+    .then(changeAddressValue);
 }
 
 /**
@@ -52,6 +62,21 @@ function registerComplaint() {
 //a chave da api do geoapify
 const GEOAPIFY_API_KEY = "ef172e5aac494f98ad94e03ba0d41fb8";
 
+const DEFAULT_MAP_COORDINATES = [0, 0];
+const DEFAULT_MAP_ZOOM = 15;
+const MAX_MAP_ZOOM = 20;
+const ICON_SIZE = [31, 46];
+
+const MARKER_ICON = L.icon({
+  iconUrl: `https://api.geoapify.com/v1/icon/?type=awesome&color=red&size=small&icon=lightbulb&shadowColor=%23512424&scaleFactor=2&apiKey=${GEOAPIFY_API_KEY}`,
+  iconSize: ICON_SIZE,
+});
+
+const map = L.map("map");
+map.setView(DEFAULT_MAP_COORDINATES, DEFAULT_MAP_ZOOM);
+
+let marker;
+
 //Obtendo inputs
 const emailInput = document.getElementById("input-email");
 const addressInput = document.getElementById("input-address");
@@ -69,24 +94,7 @@ const goToComplaintsPageButton = document.getElementById(
 );
 goToComplaintsPageButton.addEventListener("click", goToComplaintsPage);
 
-navigator.geolocation.getCurrentPosition(loadMap, () =>
-  alert("É necessária a permissão para sabermos de onde voce está nos chamando")
-);
-
-const DEFAULT_MAP_COORDINATES = [0, 0];
-const DEFAULT_MAP_ZOOM = 15;
-const MAX_MAP_ZOOM = 20;
-const ICON_SIZE = [31, 46];
-
-const MARKER_ICON = L.icon({
-  iconUrl: `https://api.geoapify.com/v1/icon/?type=awesome&color=red&size=small&icon=lightbulb&shadowColor=%23512424&scaleFactor=2&apiKey=${GEOAPIFY_API_KEY}`,
-  iconSize: ICON_SIZE,
-});
-
-let marker;
-
-const map = L.map("map");
-map.setView(DEFAULT_MAP_COORDINATES, DEFAULT_MAP_ZOOM);
+navigator.geolocation.getCurrentPosition(loadMap, onNotAllowingLocation);
 
 function loadMap({ coords }) {
   const locationCoordinates = new L.LatLng(coords.latitude, coords.longitude);
