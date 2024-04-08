@@ -6,14 +6,7 @@ import complaintsDatabase from "./database/database.js";
 function onSelectAddress({ latlng }) {
   const reverseGeocodingUrl = `https://api.geoapify.com/v1/geocode/reverse?lat=${latlng.lat}&lon=${latlng.lng}&apiKey=${GEOAPIFY_API_KEY}`;
 
-  const markerIcon = L.icon({
-    iconUrl: `https://api.geoapify.com/v1/icon/?type=material&color=red&icon=cloud&iconType=awesome&scaleFactor=2&apiKey=${GEOAPIFY_API_KEY}`,
-    iconSize: [31, 46], // size of the icon
-  });
-
-  var newMarker = new L.marker(latlng, { icon: markerIcon }).addTo(
-    markersGroup
-  );
+  marker.setLatLng(latlng);
 
   fetch(reverseGeocodingUrl)
     .then((result) => result.json())
@@ -77,25 +70,33 @@ const goToComplaintsPageButton = document.getElementById(
 goToComplaintsPageButton.addEventListener("click", goToComplaintsPage);
 
 navigator.geolocation.getCurrentPosition(loadMap, () =>
-  alert("É necessária a permissão para usar o recurso de mapa")
+  alert("É necessária a permissão para sabermos de onde voce está nos chamando")
 );
 
+const DEFAULT_MAP_COORDINATES = [0, 0];
+const DEFAULT_MAP_ZOOM = 15;
+const MAX_MAP_ZOOM = 20;
+const ICON_SIZE = [31, 46];
+
+const MARKER_ICON = L.icon({
+  iconUrl: `https://api.geoapify.com/v1/icon/?type=awesome&color=red&size=small&icon=lightbulb&shadowColor=%23512424&scaleFactor=2&apiKey=${GEOAPIFY_API_KEY}`,
+  iconSize: ICON_SIZE,
+});
+
+let marker;
+
 const map = L.map("map");
-var markersGroup = new L.layerGroup();
+map.setView(DEFAULT_MAP_COORDINATES, DEFAULT_MAP_ZOOM);
 
 function loadMap({ coords }) {
-  map.setView([coords.latitude, coords.longitude], 15);
+  const locationCoordinates = new L.LatLng(coords.latitude, coords.longitude);
 
-  // const zooMarkerPopup = L.popup().setContent("This is Munich Zoo");
+  marker = new L.marker(locationCoordinates, { icon: MARKER_ICON }).addTo(map);
+  map.setView(locationCoordinates, DEFAULT_MAP_ZOOM);
 
-  // const zooMarker = L.marker([coords.latitude, coords.longitude]);
-
-  // zooMarker.bindPopup(zooMarkerPopup).addTo(map);
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 20,
+    maxZoom: MAX_MAP_ZOOM,
   }).addTo(map);
 
-  map.addLayer(markersGroup);
-  // mapbox.addTo(map);
   map.on("click", onSelectAddress);
 }
