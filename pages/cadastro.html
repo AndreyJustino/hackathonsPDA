@@ -20,27 +20,22 @@
 
     <link rel="stylesheet" href="../styles/reset.css" />
 
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
-    /> -->
-
-    <link rel="stylesheet" href="../styles/cadastro.css" />
-
     <link rel="stylesheet" href="../styles/cadastro.css" />
   </head>
   <body>
-    <form id="form-registration-complaint" class="card">
+    <form id="form-registration-complaint">
       <h2>Cadastro de Denúncia</h2>
-      <!-- 
-      <label for="input-nome">Nome:</label>
-      <input type="text" id="input-nome" required /> -->
 
-      <label class="are-small" for="input-email">Email:</label>
+      <label for="input-complaints-title">Titulo:</label>
       <input
-        class="input is-small"
-        type="email"
-        class="input is-small"
+        type="text"
+        id="input-complaints-title"
+        placeholder="Semáforo quebrado..."
+        required
+      />
+
+      <label for="input-email">Email:</label>
+      <input
         type="email"
         id="input-email"
         required
@@ -53,7 +48,6 @@
       </div>
 
       <input
-        class="input is-small"
         type="text"
         value="Marque o local onde ocorreu o denunciado"
         required
@@ -62,7 +56,7 @@
       />
 
       <label for="select-type">Tipo:</label>
-      <select class="select is-small" name="select-type" id="select-type">
+      <select name="select-type" id="select-type">
         <option value="Infraestrutura">
           Infraestrutura - Buraco na pista, Semaforo quebrado...
         </option>
@@ -75,17 +69,10 @@
         <option value="Outro">Outro...</option>
       </select>
 
-      <button
-        class="button is-small is-danger"
-        type="submit"
-        id="button-report"
-      >
+      <button class="submit-button" type="submit" id="button-report">
         Denunciar
       </button>
-      <button
-        class="button is-small is-link is-inverted"
-        id="button-goto-complaints"
-      >
+      <button class="goto-complaints-button" id="button-goto-complaints">
         Ver denuncias
       </button>
     </form>
