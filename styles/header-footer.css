@@ -35,7 +35,7 @@ footer {
   gap: 10px;
   place-items: center;
 
-  background-color: var(--footer);
+  background-color: var(--footer-color);
   color: white;
 
   padding: 10px;
