@@ -1,52 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quem Já Sou</title>
-    <link rel="stylesheet" href="../styles/quem-ja-usou.css">
-    <link rel="icon" href="img/maps.jpg" type="image/png">  
-</head>
+    <link rel="stylesheet" href="../styles/quem-ja-usou.css" />
+    <link rel="stylesheet" href="../styles/variaveis.css" />
+    <link rel="icon" href="img/maps.jpg" type="image/png" />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/reporte-logo.png"
+      type="image/x-icon"
+    />
+  </head>
 
-<body>
-<header>
-    <img class="report-logo" src="../assets/images/reporte-logo.png" alt="Descrição da sua logo">
-    <h3 class="start-page"><a class="a-quem" href="/index.html">Inicio</a></h3>
-    <h3 class="who-we-are"><a class="a-quem" href="./quem-somos.html">Quem Somos</a></h3>
-    <h3 class="support"><a class="a-quem" href="./apoie-esse-projeto.html">Apoie esse Projeto</a></h3>
-</header>
+  <body>
+    <header>
+      <a href="../index.html">
+        <img
+          src="../assets/images/reporte-logo.png"
+          alt="logo-reporte"
+          class="logo"
+        />
+      </a>
+      <nav>
+        <ul type="none">
+          <li><a href="./quem-somos.html">QUEM SOMOS</a></li>
+          <li><a href="./quem-ja-usou.html">QUEM JA USOU</a></li>
+          <li>
+            <a href="../pages/apoie-esse-projeto.html">APOIE ESSE PROJETO</a>
+          </li>
+          <li><a href="./cadastro.html">REPORTAR</a></li>
+        </ul>
+      </nav>
+    </header>
 
+    <h1 class="who-used">Quem Já Usou</h1>
 
-<h1 class="who-used">Quem Já Usou</h1>
+    <main>
+      <div class="Natasha">
+        <img
+          class="natasha-img"
+          src="../assets/images/garotaderj.png"
+          alt="mulher"
+        />
+        <p class="Natasha-RJ">
+          Natasha<br />
+          Moradora de São Gonçalo, RJ
+        </p>
+        <p class="natasha-comment">
+          Finalmente me sinto ouvida! Graças ao Reporte Agora, pude relatar um
+          buraco perigoso perto da minha casa que estava causando problemas há
+          meses. Em questão de dias, vi uma equipe de reparos no local. Estou
+          impressionada com a eficiência do projeto!
+        </p>
+      </div>
 
+      <div class="Cleide">
+        <img
+          class="cleide-img"
+          src="../assets/images/senhora.png"
+          alt="senhora"
+        />
+        <p class="Cleide-PR">
+          Cleide<br />
+          Moradora de Palmeira, PR
+        </p>
+        <p class="cleide-comment">
+          O Reporte Agora é uma verdadeira revolução! Eu relutei em relatar
+          aquele semáforo quebrado na minha rua, mas com este projeto foi tão
+          simples! E o melhor de tudo, em menos de uma semana, o semáforo foi
+          consertado. Parabéns à equipe por esta iniciativa incrível!
+        </p>
+      </div>
 
-<div class="Natasha">
-    <img class="natasha-img" src="../assets/images/garotaderj.png" alt="mulher">
-    <p class="Natasha-RJ">
-        Natasha<br>
-        Moradora de São Gonçalo, RJ
-    </p>
-<p class="natasha-comment">Finalmente me sinto ouvida! Graças ao Reporte Agora, pude relatar um buraco perigoso perto da minha casa que estava causando problemas há meses. Em questão de dias, vi uma equipe de reparos no local. Estou impressionada com a eficiência do projeto!</p>
-</div>
+      <div class="Carlos">
+        <img src="../assets/images/homem.png" alt="homem" />
+        <p class="Carlos-BH">
+          Carlos<br />
+          Morador de Betim, BH
+        </p>
 
-<div class="Cleide">
-    <img class="cleide-img" src="../assets/images/senhora.png" alt="senhora">
-    <p class="Cleide-PR">
-        Cleide<br> 
-        Moradora de Palmeira, PR
-    </p>
-<p class="cleide-comment">O Reporte Agora é uma verdadeira revolução! Eu relutei em relatar aquele semáforo quebrado na minha rua, mas com este projeto foi tão simples! E o melhor de tudo, em menos de uma semana, o semáforo foi consertado. Parabéns à equipe por esta iniciativa incrível!</p>
-</div>
-
-<div class="Carlos">
-    <img src="../assets/images/homem.png" alt="homem">
-    <p class="Carlos-BH">
-        Carlos<br>  
-        Morador de Betim, BH 
-    </p>
-
-<p class="carlos-comment">Estou realmente impressionado com o Reporte Agora! Eu nunca pensei que seria tão fácil relatar um problema na minha cidade. Recentemente, 
-    reportei um banco de praça danificado perto da minha casa e fiquei surpresa com a rapidez com que foi resolvido. Obrigada por dar voz aos cidadãos!</p>
-</div>
-</body>
+        <p class="carlos-comment">
+          Estou realmente impressionado com o Reporte Agora! Eu nunca pensei que
+          seria tão fácil relatar um problema na minha cidade. Recentemente,
+          reportei um banco de praça danificado perto da minha casa e fiquei
+          surpresa com a rapidez com que foi resolvido. Obrigada por dar voz aos
+          cidadãos!
+        </p>
+      </div>
+    </main>
+    <footer>
+        <h2>&copy Reporte</h2>
+        <ul>
+          <li class="esfera">
+            <a href="#" target="_blank" class="link-email" rel="external">
+              <img
+                src="../assets/images/e-mail.png"
+                alt="Email"
+                class="icon-email"
+              />
+            </a>
+          </li>
+          <li class="esfera">
+            <a
+              href="https://github.com/AndreyJustino/hackathonsPDA"
+              target="_blank"
+              class="link-github"
+              rel="external"
+            >
+              <img
+                src="../assets/images/github.png"
+                alt="GitHub"
+                class="icon-github"
+              />
+            </a>
+          </li>
+        </ul>
+      </footer>
+  </body>
 </html>

@@ -1,109 +1,109 @@
-header {
-    background-color: #708645;
-    width: 150%;
-    height: 105px;
-    margin: auto;
-    padding: 20px;
-    margin-top: -10px;
-
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #44312B;
+  background-color: #44312b;
 }
 
-.report-logo {
-    width: 320px;
-    height: 100px;
+header {
+  background-color: var(--header);
+  font-weight: 600;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.start-page {
-   margin-top: -70px;
-   margin-left: 500px;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+header img {
+  width: 320px;
+  height: 100px;
 }
 
-.who-we-are {
-    margin-top: -40px;
-    margin-left: 699px;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
-
-.support {
-    margin-top: -40px;
-    margin-left: 1000px;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+nav ul li a {
+  text-decoration: none;
+  color: var(--white);
 }
 
-
-.who-used {
-    color: white;
-    font-size: 60px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 70px;
-    text-align: left;
-    margin-left: 150px;
-}
- 
-.Natasha,
-.Cleide {
-    float: left;
-    width: 30%; 
-    margin: 20px 1.5%; 
-    text-align: center;
-    
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.Carlos {
-    margin-top: -20px;
+div {
+  width: 242px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0 10px 0;
 }
 
-.Natasha img,
-.Cleide img,
-.Carlos img {
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
+div img {
+  width: 150px;
+  height: 150px;
 }
 
-.Natasha p,
-.Cleide p,
-.Carlos p {
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 10px;
-   
+h1 {
+  text-align: center;
+  color: white;
+  padding: 20px;
 }
 
-.natasha-comment {
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: left;
-    margin-top: 300px;
-   
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
 }
 
-.cleide-comment {
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    margin-top: 300px;
+footer h2 {
+  font-size: 1.3rem;
 }
 
-.carlos-comment {
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    margin-top: 300px;
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  gap: 20px;
+  margin-top: 10px;
 }
 
+.esfera {
+  background-color: var(--white);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
+.esfera:hover {
+  box-shadow: 0 0 10px 0.25rem var(--header);
+}
 
-.a-quem {
-    color: white;
-    text-decoration: none;
+.icon-github,
+.icon-email {
+  margin-top: 3px;
+  width: 33px;
 }
