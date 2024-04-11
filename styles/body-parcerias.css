@@ -1,10 +1,13 @@
 .sobre-nos { 
-    padding: 50px;
-    padding: 200px;
+    /* padding: 50px;
+    padding: 200px; */
+    text-align: center;
+    width: 80vw;
+    margin: auto;
  }
  
  body {
- background-color: #44312B;
+    background-color: #44312B;
  }
  
  .h1-sobre-nos {
@@ -14,9 +17,10 @@
 
 .sobre-nos p {
     text-align: left;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
+    margin: 25px 0 20px 0;
     font-size: 22px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 
 .beneficio {
@@ -30,4 +34,9 @@
 }
 .beneficio {
     color: white;
+}
+
+.container h2{
+    color: white;
+    padding: 0 0 10px 0px;
 }
