@@ -64,3 +64,8 @@ button {
         width: 90vw;
     }
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}
