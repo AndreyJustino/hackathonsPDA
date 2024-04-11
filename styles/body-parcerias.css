@@ -1,0 +1,20 @@
+.sobre-nos { 
+    padding: 50px;
+    padding: 200px;
+ }
+ 
+ body {
+ background-color: #44312B;
+ }
+ 
+ .h1-sobre-nos {
+    font-size: 70px;
+    margin-left: 40px;
+}
+
+.sobre-nos p {
+    text-align: left;
+    margin-bottom: 100px;
+    font-size: 22px;
+    margin-left: 50px;
+}
